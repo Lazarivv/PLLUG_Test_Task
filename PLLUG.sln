@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLLUG_test_task", "PLLUG\PLLUG_test_task.csproj", "{980FAB17-AE83-46B8-88D5-62477ADFDAAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLLUG", "PLLUG\PLLUG.csproj", "{980FAB17-AE83-46B8-88D5-62477ADFDAAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
