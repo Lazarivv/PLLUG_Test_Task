@@ -4,21 +4,20 @@ namespace PLLUG
 {
     public class Sphere : IShape
     {
-        public double Radius { get; private set; }//May change radius by Diameter
+        public double Diameter { get; private set; }
 
         public double Circumference { get; set; }
+        
 
         public Sphere(double circumference)
         {
             Circumference = circumference;
-            GetRadius();
+            GetDiameter();
         }
-
-
 
         public bool PassThroughCircle(RoundedObject robj)
         {
-            if(robj.Radius > Radius)
+            if(robj.Diameter > Diameter)
             {
                 return true;
             }
@@ -27,17 +26,17 @@ namespace PLLUG
 
         public bool PassThroughRectangle(SimpleObject sobj)
         {
-            if ((sobj.Width < sobj.Height && Radius * 2 < sobj.Width) ||
-                (sobj.Width > sobj.Height && Radius * 2 < sobj.Height))
+            if ((sobj.Width < sobj.Height && Diameter < sobj.Width) ||
+                (sobj.Width > sobj.Height && Diameter < sobj.Height))
             {
                 return true;
             }
             return false;
         }
 
-        private double GetRadius()
+        private double GetDiameter()
         {
-            return Radius = Circumference / Math.PI * 2;
+            return Diameter = Circumference / Math.PI;
         }
     }
 }
