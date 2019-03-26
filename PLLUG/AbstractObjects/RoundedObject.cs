@@ -2,12 +2,12 @@
 {
     public class RoundedObject
     {
-        public double Radius { get; set; }
+        public double Diameter { get; set; }
 
 
-        public RoundedObject(double radius)
+        public RoundedObject(double diameter)
         {
-            Radius = radius;
+            Diameter = diameter;
         }
 
         //public override bool IsContainCylinder(Cylinder obj)
@@ -31,10 +31,10 @@
         //    return false;
         //}
 
-        public double GetDiametr(double Radius)
-        {
-            return Radius * 2;
-        }
+        //public double GetDiametr(double Radius)
+        //{
+        //    return Radius * 2;
+        //}
 
 
     }
