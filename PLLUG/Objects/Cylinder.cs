@@ -4,18 +4,18 @@ namespace PLLUG
     public class Cylinder:IShape
     {
         public double Height { get; set; }
-        public double  Radius { get; set; }
+        public double  Diameter { get; set; }
 
-        public Cylinder(double height ,double radius)
+        public Cylinder(double height ,double diameter)
         {
             Height = height;
-            Radius = radius;
+            Diameter = diameter;
         }
 
         public bool PassThroughCircle(RoundedObject robj)
         {
             //throw new NotImplementedException();
-            if (robj.Radius > Radius)
+            if (robj.Diameter > Diameter)
             {
                 return true;
             }
@@ -24,8 +24,8 @@ namespace PLLUG
 
         public bool PassThroughRectangle(SimpleObject sobj)
         {
-            if ((sobj.Width < sobj.Height && Radius * 2 < sobj.Width) || 
-                (sobj.Width > sobj.Height && Radius * 2 < sobj.Height)){
+            if ((sobj.Width < sobj.Height && Diameter < sobj.Width) || 
+                (sobj.Width > sobj.Height && Diameter < sobj.Height)){
                 return true;
             }
             return false;
