@@ -75,7 +75,7 @@ namespace PLLUG
             //throw new NotImplementedException();
             double RefDiagonal = GetMinDiagonl();
 
-            if (RefDiagonal < robj.Radius * 2)
+            if (RefDiagonal < robj.Diameter)
             {
                 return true;
             }
