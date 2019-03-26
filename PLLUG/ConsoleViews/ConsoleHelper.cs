@@ -36,9 +36,9 @@ namespace PLLUG
                         Console.WriteLine("\nEnter parametrs for Cylinder:");
                         Console.Write("Height:");
                         double cylinder_heigth = Convert.ToDouble(Console.ReadLine());
-                        Console.Write("Radius:");
-                        double Radius = Convert.ToDouble(Console.ReadLine());
-                        shape = new Cylinder(cylinder_heigth, Radius);
+                        Console.Write("Diameter:");
+                        double diameter = Convert.ToDouble(Console.ReadLine());
+                        shape = new Cylinder(cylinder_heigth, diameter);
                         break;
 
                     case 3:
@@ -66,7 +66,7 @@ namespace PLLUG
 
                 bool success = Int32.TryParse(Console.ReadLine(),out int number);
 
-                double r = 0;
+                double d = 0;
                 double h = 0;
                 double w = 0;
 
@@ -77,9 +77,9 @@ namespace PLLUG
                 {
                     if (number == 2)
                     {
-                        Console.Write("Enter Radius: ");
-                        r = Convert.ToDouble(Console.ReadLine());
-                        RoundedObject roundedObject = new RoundedObject(r);
+                        Console.Write("Enter Diameter: ");
+                        d = Convert.ToDouble(Console.ReadLine());
+                        RoundedObject roundedObject = new RoundedObject(d);
                         res = shape.PassThroughCircle(roundedObject);
                     }
                     else if (number == 1)
